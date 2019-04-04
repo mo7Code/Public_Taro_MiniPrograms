@@ -1,0 +1,15 @@
+{
+	"description": "基于Taro的小程序开发框架",
+	"appid": "touristappid",
+	"projectname": "myApp",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"miniprogramRoot": "dist/",
+	"condition": {}
+}
