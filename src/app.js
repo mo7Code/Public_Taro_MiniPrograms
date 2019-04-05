@@ -1,10 +1,10 @@
-import Taro, { Component } from "@tarojs/taro";
-import { Provider } from "@tarojs/mobx";
-import Index from "./pages/index";
+import Taro, { Component } from '@tarojs/taro';
+import { Provider } from '@tarojs/mobx';
+import Index from './pages/index';
 
-import counterStore from "./store/counter";
+import counterStore from './store/counter';
 
-import "./app.less";
+import './app.less';
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -18,12 +18,12 @@ const store = {
 
 class App extends Component {
   config = {
-    pages: ["pages/index/index"],
+    pages: ['pages/index/index'],
     window: {
-      backgroundTextStyle: "light",
-      navigationBarBackgroundColor: "#fff",
-      navigationBarTitleText: "WeChat",
-      navigationBarTextStyle: "black"
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#fff',
+      navigationBarTitleText: 'WeChat',
+      navigationBarTextStyle: 'black'
     }
   };
 
@@ -46,4 +46,4 @@ class App extends Component {
   }
 }
 
-Taro.render(<App />, document.getElementById("app"));
+Taro.render(<App />, document.getElementById('app'));

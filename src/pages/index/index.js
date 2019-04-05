@@ -1,20 +1,20 @@
-import Taro, { Component } from "@tarojs/taro";
-import { View, Button, Text } from "@tarojs/components";
-import { observer, inject } from "@tarojs/mobx";
+import Taro, { Component } from '@tarojs/taro';
+import { View, Button, Text } from '@tarojs/components';
+import { observer, inject } from '@tarojs/mobx';
 
-import "./index.less";
+import './index.less';
 
-@inject("counterStore")
+@inject('counterStore')
 @observer
 class Index extends Component {
   config = {
-    navigationBarTitleText: "首页"
+    navigationBarTitleText: '首页'
   };
 
   componentWillMount() {}
 
   componentWillReact() {
-    console.log("componentWillReact");
+    console.log('componentWillReact');
   }
 
   componentDidMount() {}
@@ -45,7 +45,7 @@ class Index extends Component {
       counterStore: { counter }
     } = this.props;
     return (
-      <View className='index'>
+      <View className="index">
         <Button onClick={this.increment}>+</Button>
         <Button onClick={this.decrement}>-</Button>
         <Button onClick={this.incrementAsync}>Add Async</Button>
