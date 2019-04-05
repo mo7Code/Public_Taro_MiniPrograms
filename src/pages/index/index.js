@@ -49,6 +49,7 @@ class Index extends Component {
         <Button onClick={this.increment}>+</Button>
         <Button onClick={this.decrement}>-</Button>
         <Button onClick={this.incrementAsync}>Add Async</Button>
+        123
         <Text>{counter}</Text>
       </View>
     );
