@@ -7,9 +7,13 @@
 		"es6": false,
 		"postcss": false,
 		"minified": false,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": false
 	},
 	"compileType": "miniprogram",
 	"miniprogramRoot": "dist/",
+	"libVersion": "2.6.4",
 	"condition": {}
 }
