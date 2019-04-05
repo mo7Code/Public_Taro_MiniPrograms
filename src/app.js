@@ -13,7 +13,7 @@ import './app.less';
 // }
 
 const store = {
-  counterStore
+  counterStore,
 };
 
 class App extends Component {
@@ -23,8 +23,15 @@ class App extends Component {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
+      navigationBarTextStyle: 'black',
+    },
+    requiredBackgroundModes: ['audio'],
+    permission: {
+      'scope.userLocation': {
+        desc: '你的位置信息将用于小程序位置接口的效果展示',
+      },
+    },
+    navigationBarTitleText: 'one-taro-app',
   };
 
   componentDidMount() {}
