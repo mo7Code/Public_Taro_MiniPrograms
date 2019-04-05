@@ -1,7 +1,7 @@
 {
 	"description": "基于Taro的小程序开发框架",
-	"appid": "touristappid",
-	"projectname": "myApp",
+	"appid": "wx6aa37b570324303c",
+	"projectname": "one-taro-app",
 	"setting": {
 		"urlCheck": false,
 		"es6": false,
