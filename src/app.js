@@ -18,7 +18,7 @@ const store = {
 
 class App extends Component {
   config = {
-    pages: ['view/index/index', 'view/demo/index'],
+    pages: ['pages/index/index', 'pages/demo/index'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',

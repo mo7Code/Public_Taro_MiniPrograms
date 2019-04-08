@@ -25,6 +25,7 @@ class Demo extends Component {
         这里是demo页面
         <Button>这里是demo页面 Button</Button>
         <Text className="text">这里是demo页面 Text</Text>
+        路由:
       </View>
     );
   }
