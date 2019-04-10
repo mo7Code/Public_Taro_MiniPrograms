@@ -50,6 +50,9 @@ npm run build:h5
 
 ## 脚手架定制化
 
+- 配置 CSS Modules
+- 配置 less 支持
+
 ## 状态管理和页面通信
 
 Mobx
