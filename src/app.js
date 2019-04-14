@@ -18,7 +18,7 @@ const store = {
 
 class App extends Component {
   config = {
-    pages: ['pages/index/index'],
+    pages: ['pages/index/index', 'pages/demo/index'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -31,7 +31,6 @@ class App extends Component {
         desc: '你的位置信息将用于小程序位置接口的效果展示',
       },
     },
-    navigationBarTitleText: 'one-taro-app',
   };
 
   componentDidMount() {}

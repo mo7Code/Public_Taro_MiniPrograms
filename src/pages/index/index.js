@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Button, Text } from '@tarojs/components';
+import { View, Button, Text, Navigator } from '@tarojs/components';
 import { observer, inject } from '@tarojs/mobx';
 
 import './index.less';
@@ -8,7 +8,7 @@ import './index.less';
 @observer
 class Index extends Component {
   config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '首页',
   };
 
   componentWillMount() {}
@@ -42,15 +42,16 @@ class Index extends Component {
 
   render() {
     const {
-      counterStore: { counter }
+      counterStore: { counter },
     } = this.props;
     return (
       <View className="index">
         <Button onClick={this.increment}>+</Button>
         <Button onClick={this.decrement}>-</Button>
         <Button onClick={this.incrementAsync}>Add Async</Button>
-        123
         <Text>{counter}</Text>
+
+        <Navigator url="/pages/demo/index">跳转到demo页面</Navigator>
       </View>
     );
   }

@@ -1,3 +1,11 @@
+<!--
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-05 22:28:55
+ * @LastEditTime: 2019-04-14 18:47:51
+ -->
+
 # Public_Taro_MiniProgram
 
 官方文档 <https://nervjs.github.io/taro/docs/GETTING-STARTED.html>
@@ -50,6 +58,9 @@ npm run build:h5
 
 ## 脚手架定制化
 
+- 配置 CSS Modules
+- 配置 less 支持
+
 ## 状态管理和页面通信
 
 Mobx
@@ -61,7 +72,9 @@ Mobx
 
 ## 客户端本地存储
 
-## 实用工具库
+## 数据请求方法
+
+## 实用工具库(待验证)
 
 Lodash
 
@@ -78,4 +91,13 @@ import array from 'lodash/array';
 import object from 'lodash/fp/object';
 import at from 'lodash/at';
 import curryN from 'lodash/fp/curryN';
+```
+
+## 额外注意事项
+
+## 样式
+
+```js
+//修改了 config/index.js 文件本地包大小
+config.weapp.module.postcss.url.config.limit;
 ```
