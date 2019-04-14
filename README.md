@@ -1,3 +1,11 @@
+<!--
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-05 22:28:55
+ * @LastEditTime: 2019-04-14 18:47:51
+ -->
+
 # Public_Taro_MiniProgram
 
 官方文档 <https://nervjs.github.io/taro/docs/GETTING-STARTED.html>
@@ -86,3 +94,10 @@ import curryN from 'lodash/fp/curryN';
 ```
 
 ## 额外注意事项
+
+## 样式
+
+```js
+//修改了 config/index.js 文件本地包大小
+config.weapp.module.postcss.url.config.limit;
+```
