@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-05 22:42:58
+ * @LastEditTime: 2019-04-14 18:43:04
+ */
 const config = {
   projectName: 'one-taro-app',
   date: '2019-4-5',
@@ -54,7 +61,7 @@ const config = {
         url: {
           enable: true,
           config: {
-            limit: 10240, // 设定转换尺寸上限
+            limit: 102400, // 设定转换尺寸上限
           },
         },
         cssModules: {
