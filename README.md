@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-04-26 22:42:14
+ * @LastEditTime: 2019-04-26 22:46:37
  -->
 
 # Public_Taro_MiniProgram
@@ -117,6 +117,8 @@ import curryN from 'lodash/fp/curryN';
 | moved             |          保留          |
 
 ## js 模块引用的路径别名配置 `Webpack alias`
+
+建议别名使用 @/ 开头而非仅用 @ 开头，因为有小概率会与某些 scoped 形式的 npm 包（如：@babel/core）产生命名冲突。
 
 ```js
 

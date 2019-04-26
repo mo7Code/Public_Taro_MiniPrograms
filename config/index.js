@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:42:58
- * @LastEditTime: 2019-04-26 22:41:32
+ * @LastEditTime: 2019-04-26 22:46:08
  */
 const path = require('path');
 const config = {
@@ -17,13 +17,6 @@ const config = {
   },
   alias: {
     '@': path.resolve(__dirname, '..', 'src'),
-    // '@/api': path.resolve(__dirname, '..', 'src/api'),
-    // '@/components': path.resolve(__dirname, '..', 'src/components'),
-    // '@/config': path.resolve(__dirname, '..', 'src/config'),
-    // '@/images': path.resolve(__dirname, '..', 'src/images'),
-    // '@/pages': path.resolve(__dirname, '..', 'src/pages'),
-    // '@/store': path.resolve(__dirname, '..', 'src/store'),
-    // '@/utils': path.resolve(__dirname, '..', 'src/utils'),
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
