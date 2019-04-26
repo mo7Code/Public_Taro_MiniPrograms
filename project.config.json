@@ -1,21 +1,21 @@
 {
-	"description": "珊瑚安全教育平台",
-	"appid": "wx6aa37b570324303c",
-	"projectname": "%E7%8F%8A%E7%91%9A%E5%AE%89%E5%85%A8%E6%95%99%E8%82%B2%E5%B9%B3%E5%8F%B0-Taro",
-	"setting": {
-		"urlCheck": false,
-		"es6": false,
-		"postcss": false,
-		"minified": false,
-		"newFeature": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"uglifyFileName": false
-	},
-	"compileType": "miniprogram",
-	"miniprogramRoot": "dist/",
-	"libVersion": "2.6.6",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {}
+  "description": "这是一个小程序脚手架~",
+  "appid": "wx6aa37b570324303c",
+  "projectname": "one-weapp",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "newFeature": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "uglifyFileName": false
+  },
+  "compileType": "miniprogram",
+  "miniprogramRoot": "dist/",
+  "libVersion": "2.6.6",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {}
 }

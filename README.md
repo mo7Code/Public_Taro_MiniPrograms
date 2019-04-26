@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-04-26 17:45:07
+ * @LastEditTime: 2019-04-26 17:49:57
  -->
 
 # Public_Taro_MiniProgram
@@ -95,12 +95,9 @@ import curryN from 'lodash/fp/curryN';
 
 ## 额外注意事项
 
-## 样式
+`不支持在 render 生命周期之外编写 jsx`
 
-```js
-//修改了 config/index.js 文件本地包大小
-config.weapp.module.postcss.url.config.limit;
-```
+`如果代码效果无法出现,请重新执行 npm start`
 
 ## 生命周期对应表
 
