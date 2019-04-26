@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-04-26 22:33:56
+ * @LastEditTime: 2019-04-26 22:42:14
  -->
 
 # Public_Taro_MiniProgram
@@ -121,13 +121,13 @@ import curryN from 'lodash/fp/curryN';
 ```js
 
   '@': path.resolve(__dirname, '..', 'src'),
-  '@/api': path.resolve(__dirname, '..', 'src/api'),
-  '@/components': path.resolve(__dirname, '..', 'src/components'),
-  '@/config': path.resolve(__dirname, '..', 'src/config'),
-  '@/images': path.resolve(__dirname, '..', 'src/images'),
-  "@/pages": path.resolve(__dirname, '..', 'src/pages'),
-  '@/store': path.resolve(__dirname, '..', 'src/store'),
-  '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+  // '@/api': path.resolve(__dirname, '..', 'src/api'),
+  // '@/components': path.resolve(__dirname, '..', 'src/components'),
+  // '@/config': path.resolve(__dirname, '..', 'src/config'),
+  // '@/images': path.resolve(__dirname, '..', 'src/images'),
+  // "@/pages": path.resolve(__dirname, '..', 'src/pages'),
+  // '@/store': path.resolve(__dirname, '..', 'src/store'),
+  // '@/utils': path.resolve(__dirname, '..', 'src/utils'),
 
 ```
 
