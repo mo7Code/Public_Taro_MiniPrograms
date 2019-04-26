@@ -1,7 +1,7 @@
 {
-	"description": "基于Taro的小程序开发框架",
+	"description": "珊瑚安全教育平台",
 	"appid": "wx6aa37b570324303c",
-	"projectname": "one-taro-app",
+	"projectname": "%E7%8F%8A%E7%91%9A%E5%AE%89%E5%85%A8%E6%95%99%E8%82%B2%E5%B9%B3%E5%8F%B0-Taro",
 	"setting": {
 		"urlCheck": false,
 		"es6": false,
@@ -14,6 +14,8 @@
 	},
 	"compileType": "miniprogram",
 	"miniprogramRoot": "dist/",
-	"libVersion": "2.6.4",
+	"libVersion": "2.6.6",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {}
 }

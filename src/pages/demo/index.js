@@ -1,15 +1,21 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Button, Text } from '@tarojs/components';
+import { View, Button, Text, Navigator } from '@tarojs/components';
+import { observer, inject } from '@tarojs/mobx';
+
 import './index.less';
 
-class Demo extends Component {
+@inject('counterStore')
+@observer
+class Index extends Component {
   config = {
-    navigationBarTitleText: 'Demo',
+    navigationBarTitleText: '首页',
   };
 
   componentWillMount() {}
 
-  componentWillReact() {}
+  componentWillReact() {
+    console.log('componentWillReact');
+  }
 
   componentDidMount() {}
 
@@ -19,16 +25,36 @@ class Demo extends Component {
 
   componentDidHide() {}
 
+  increment = () => {
+    const { counterStore } = this.props;
+    counterStore.increment();
+  };
+
+  decrement = () => {
+    const { counterStore } = this.props;
+    counterStore.decrement();
+  };
+
+  incrementAsync = () => {
+    const { counterStore } = this.props;
+    counterStore.incrementAsync();
+  };
+
   render() {
+    const {
+      counterStore: { counter },
+    } = this.props;
     return (
-      <View>
-        这里是demo页面
-        <Button>这里是demo页面 Button</Button>
-        <Text className="text">这里是demo页面 Text</Text>
-        路由:
+      <View className="index">
+        <Button onClick={this.increment}>+</Button>
+        <Button onClick={this.decrement}>-</Button>
+        <Button onClick={this.incrementAsync}>Add Async</Button>
+        <Text>{counter}</Text>
+
+        <Navigator url="/pages/demo/index">跳转到demo页面</Navigator>
       </View>
     );
   }
 }
 
-export default Demo;
+export default Index;

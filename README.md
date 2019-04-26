@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-04-14 18:47:51
+ * @LastEditTime: 2019-04-26 17:45:07
  -->
 
 # Public_Taro_MiniProgram
@@ -101,3 +101,37 @@ import curryN from 'lodash/fp/curryN';
 //修改了 config/index.js 文件本地包大小
 config.weapp.module.postcss.url.config.limit;
 ```
+
+## 生命周期对应表
+
+| 小程序            |          taro          |
+| ----------------- | :--------------------: |
+| Page.onLoad       |   componentWillMount   |
+| onShow            |    componentDidShow    |
+| onHide            |    componentDidHide    |
+| onReady           |   componentDidMount    |
+| onUnload          |  componentWillUnmount  |
+| onError           | componentDidCatchError |
+| App.onLaunch      |   componentWillMount   |
+| Component.created |   componentWillMount   |
+| attached          |   componentDidMount    |
+| ready             |   componentDidMount    |
+| detached          |  componentWillUnmount  |
+| moved             |          保留          |
+
+## js 模块引用的路径别名配置 `Webpack alias`
+
+```js
+
+  '@': path.resolve(__dirname, '..', 'src'),
+  '@api': path.resolve(__dirname, '..', 'src/api'),
+  '@components': path.resolve(__dirname, '..', 'src/components'),
+  '@config': path.resolve(__dirname, '..', 'src/config'),
+  '@images': path.resolve(__dirname, '..', 'src/images'),
+  "@pages": path.resolve(__dirname, '..', 'src/pages'),
+  '@store': path.resolve(__dirname, '..', 'src/store'),
+  '@utils': path.resolve(__dirname, '..', 'src/utils'),
+
+```
+
+> css 暂不支持 , 在 app.js 中使用的样式会自动生效于全局

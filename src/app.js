@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-26 11:39:23
+ * @LastEditTime: 2019-04-26 16:19:39
+ */
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
 import Index from './pages/index';

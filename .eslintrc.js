@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-04-26 11:58:57
+ * @LastEditTime: 2019-04-26 11:58:46
  */
 module.exports = {
   extends: ['taro', 'plugin:prettier/recommended'],

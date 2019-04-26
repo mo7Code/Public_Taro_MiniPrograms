@@ -3,8 +3,9 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:42:58
- * @LastEditTime: 2019-04-14 18:47:41
+ * @LastEditTime: 2019-04-26 17:38:14
  */
+const path = require('path');
 const config = {
   projectName: 'one-taro-app',
   date: '2019-4-5',
@@ -13,6 +14,16 @@ const config = {
     '640': 2.34 / 2,
     '750': 1,
     '828': 1.81 / 2,
+  },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
+    '@api': path.resolve(__dirname, '..', 'src/api'),
+    '@components': path.resolve(__dirname, '..', 'src/components'),
+    '@config': path.resolve(__dirname, '..', 'src/config'),
+    '@images': path.resolve(__dirname, '..', 'src/images'),
+    '@pages': path.resolve(__dirname, '..', 'src/pages'),
+    '@store': path.resolve(__dirname, '..', 'src/store'),
+    '@utils': path.resolve(__dirname, '..', 'src/utils'),
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
