@@ -7,12 +7,12 @@
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Image, Text } from '@tarojs/components';
-import { getStore, getUrlParam } from '@utils/utils';
-import { WebView_domain, baseUrl } from '@config/baseUrl';
+import { getStore, getUrlParam } from '@/utils/utils';
+import { WebView_domain, baseUrl } from '@/config/baseUrl';
 import './index.less';
 
 //image
-import { tusiji } from '@images/load';
+import { tusiji } from '@/images/load';
 //image
 class _page extends Component {
   config = {
@@ -28,15 +28,15 @@ class _page extends Component {
     };
   }
 
-  componentWillMount() {}
+  componentWillMount() { }
 
-  componentWillReact() {}
+  componentWillReact() { }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
-  componentDidHide() {}
+  componentDidHide() { }
 
   componentDidShow() {
     let { id } = getUrlParam();
