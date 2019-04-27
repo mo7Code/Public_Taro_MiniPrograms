@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 16:01:28
- * @LastEditTime: 2019-04-26 16:55:19
+ * @LastEditTime: 2019-04-27 14:00:44
  */
 
 // let url = 'https://xcx.joywaygym.com'; //生产服
@@ -20,3 +20,5 @@ export const WebView_domain = H5_url;
 let image_url = ''; //小程序内引用图片的路径
 
 export const image_domain = image_url;
+
+export const version = '0.1.0';

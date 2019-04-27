@@ -3,13 +3,15 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-04-26 16:19:39
+ * @LastEditTime: 2019-04-27 14:00:34
  */
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
-import Index from './pages/index';
+import Index from '@/pages/index';
 
-import counterStore from './store/counter';
+import counterStore from '@/store/counter';
+
+import { version } from '@/config/baseUrl.js';
 
 import './app.less';
 
@@ -43,6 +45,13 @@ class App extends Component {
   componentDidMount() {}
 
   componentDidShow() {}
+
+  componentWillMount() {
+    console.log(
+      `%c当前程序版本--${version}`,
+      'font-size:10;color:green;font-weight:bold;'
+    );
+  }
 
   componentDidHide() {}
 
