@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-04-27 13:34:04
+ * @LastEditTime: 2019-04-27 18:55:13
  -->
 
 # Public_Taro_MiniProgram
@@ -13,6 +13,7 @@
 ## 运行方式
 
 ```bash
+taro update self
 
 npm install -g @tarojs/cli
 npm install
