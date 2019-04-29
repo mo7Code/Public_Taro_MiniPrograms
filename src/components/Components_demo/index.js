@@ -1,16 +1,21 @@
 /*
  * @LastEditors: Mark
- * @Description: In User Settings Edit
+ * @Description:
  * @Author: Mark
  * @Date: 2019-04-15 01:23:08
- * @LastEditTime: 2019-04-28 17:01:40
+ * @LastEditTime: 2019-04-29 19:21:23
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
 import PropTypes from 'prop-types';
 import './index.less';
-
+/**
+ * @description:
+ * @param: <Search_input my-class="Search_Box" />
+ * @return:
+ */
 class Components_demo extends Component {
+  static externalClasses = ['my-class'];
   static propTypes = {
     list: PropTypes.array,
   };
@@ -47,7 +52,7 @@ class Components_demo extends Component {
     const { list } = this.props;
 
     return (
-      <View className="wrapper">
+      <View className="wrapper my-class">
         这里是一个组件
         {list.map((item, index) => {
           return <View key={index}>{item.title}</View>;
