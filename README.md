@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-04-27 18:55:13
+ * @LastEditTime: 2019-04-29 19:03:06
  -->
 
 # Public_Taro_MiniProgram
@@ -13,10 +13,21 @@
 ## 运行方式
 
 ```bash
+#安装本地工具
+npm install -g @tarojs/cli
+
+#升级本地工具
 taro update self
 
-npm install -g @tarojs/cli
+#升级依赖
+taro update project
+
+#安装本地包
 npm install
+
+#默认配置微信小程序打包编译
+npm run start
+npm run build
 
 #微信小程序
 npm run dev:weapp
@@ -31,8 +42,8 @@ npm run dev:alipay
 npm run build:alipay
 
 #字节跳动小程序
-npm script
 npm run dev:tt
+npm run build:tt
 
 #H5
 npm run dev:h5
@@ -58,9 +69,6 @@ npm run build:h5
 ```
 
 ## 脚手架定制化
-
-- 配置 CSS Modules
-- 配置 less 支持
 
 ## 状态管理和页面通信
 
@@ -124,14 +132,7 @@ import curryN from 'lodash/fp/curryN';
 ```js
 
   '@': path.resolve(__dirname, '..', 'src'),
-  // '@/api': path.resolve(__dirname, '..', 'src/api'),
-  // '@/components': path.resolve(__dirname, '..', 'src/components'),
-  // '@/config': path.resolve(__dirname, '..', 'src/config'),
-  // '@/images': path.resolve(__dirname, '..', 'src/images'),
-  // "@/pages": path.resolve(__dirname, '..', 'src/pages'),
-  // '@/store': path.resolve(__dirname, '..', 'src/store'),
-  // '@/utils': path.resolve(__dirname, '..', 'src/utils'),
 
 ```
 
-> css 暂不支持 , 在 app.js 中使用的样式会自动生效于全局
+> css 暂不支持`alias` , 在 app.js 中使用的样式会自动生效于全局
