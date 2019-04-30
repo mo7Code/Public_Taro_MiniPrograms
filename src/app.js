@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-30 23:46:00
+ * @LastEditTime: 2019-05-01 00:04:09
+ */
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
 import Index from './pages/index'
@@ -30,17 +37,17 @@ class App extends Component {
     }
   }
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
-  componentDidCatchError () {}
+  componentDidCatchError() { }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
       <Provider store={store}>
         <Index />

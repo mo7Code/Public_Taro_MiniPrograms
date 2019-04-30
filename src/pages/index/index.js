@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-30 23:46:00
+ * @LastEditTime: 2019-05-01 00:04:21
+ */
 import Taro, { Component } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { observer, inject } from '@tarojs/mobx'
@@ -13,19 +20,19 @@ class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
-  componentWillMount () { }
+  componentWillMount() { }
 
-  componentWillReact () {
+  componentWillReact() {
     console.log('componentWillReact')
   }
 
-  componentDidMount () { }
+  componentDidMount() { }
 
-  componentWillUnmount () { }
+  componentWillUnmount() { }
 
-  componentDidShow () { }
+  componentDidShow() { }
 
-  componentDidHide () { }
+  componentDidHide() { }
 
   increment = () => {
     const { counterStore } = this.props
@@ -42,7 +49,7 @@ class Index extends Component {
     counterStore.incrementAsync()
   }
 
-  render () {
+  render() {
     const { counterStore: { counter } } = this.props
     return (
       <View className='index'>
@@ -55,4 +62,4 @@ class Index extends Component {
   }
 }
 
-export default Index 
+export default Index
