@@ -3,17 +3,20 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-04-26 17:38:06
+ * @LastEditTime: 2019-05-01 00:45:07
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Image, Text } from '@tarojs/components';
-import { getStore, getUrlParam } from '@/utils/utils';
-import { WebView_domain, baseUrl } from '@/config/baseUrl';
-import './index.less';
-
+import { getUrlParam } from '@/utils/utils';
+import { WebView_domain, baseUrl, image_domain } from '@/config/baseUrl';
 //image
 import { tusiji } from '@/images/load';
 //image
+
+
+import './index.less';
+
+
 class _page extends Component {
   config = {
     navigationBarTitleText: 'PageDemo',
@@ -22,9 +25,9 @@ class _page extends Component {
 
   constructor(props) {
     super(props);
-    const token = getStore('userToken');
+    // const token = getStore('userToken');
     this.state = {
-      token,
+      // token,
     };
   }
 

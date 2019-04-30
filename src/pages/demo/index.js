@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-05-01 00:27:30
- * @LastEditTime: 2019-05-01 00:42:27
+ * @LastEditTime: 2019-05-01 00:45:20
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Text, Navigator } from '@tarojs/components';
