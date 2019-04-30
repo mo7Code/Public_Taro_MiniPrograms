@@ -5,6 +5,8 @@
   "description": "xxxxxxxxxx",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev:weapp",
+    "build": "npm run build:weapp",
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
