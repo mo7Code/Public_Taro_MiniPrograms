@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-04-29 19:24:53
+ * @LastEditTime: 2019-05-01 00:59:24
  */
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
@@ -44,20 +44,20 @@ class App extends Component {
     },
   };
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentDidShow() {}
+  componentDidShow() { }
 
   componentWillMount() {
-    console.log(
+    console.info(
       `%c当前程序版本--${version}`,
       'font-size:10;color:green;font-weight:bold;'
     );
   }
 
-  componentDidHide() {}
+  componentDidHide() { }
 
-  componentDidCatchError() {}
+  componentDidCatchError() { }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
