@@ -3,11 +3,12 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-01 00:00:57
+ * @LastEditTime: 2019-05-01 00:07:15
  */
 const path = require('path');
+
 const config = {
-  projectName: 'myApp',
+  projectName: 'one-taro-app',
   date: '2019-4-30',
   designWidth: 750,
   deviceRatio: {
