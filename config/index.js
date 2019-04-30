@@ -1,3 +1,11 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-30 23:46:00
+ * @LastEditTime: 2019-05-01 00:00:57
+ */
+const path = require('path');
 const config = {
   projectName: 'myApp',
   date: '2019-4-30',
@@ -6,6 +14,9 @@ const config = {
     '640': 2.34 / 2,
     '750': 1,
     '828': 1.81 / 2
+  },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
@@ -54,7 +65,7 @@ const config = {
         url: {
           enable: true,
           config: {
-            limit: 10240 // 设定转换尺寸上限
+            limit: 409600 // 设定转换尺寸上限
           }
         },
         cssModules: {

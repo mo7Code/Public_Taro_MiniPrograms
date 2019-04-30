@@ -1,8 +1,24 @@
 {
-  "extends": ["taro"],
+  "extends": [
+    "taro"
+  ],
+  "parser": "babel-eslint",
   "rules": {
-    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
-  },
-    "parser": "babel-eslint"
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "Taro"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ]
   }
+}
