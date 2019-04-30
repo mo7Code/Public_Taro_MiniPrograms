@@ -2,7 +2,7 @@
   "name": "one-taro-app",
   "version": "1.0.0",
   "private": true,
-  "description": "xxxxxxxxxx",
+  "description": "这是一个小程序模板",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev:weapp",
@@ -36,8 +36,8 @@
     "@tarojs/mobx-h5": "1.2.26",
     "@tarojs/mobx-rn": "1.2.26",
     "mobx": "5.9.4",
-    "nervjs": "^1.3.133",
-    "nerv-devtools": "^1.3.133"
+    "nervjs": "^1.3.13",
+    "nerv-devtools": "^1.3.13"
   },
   "devDependencies": {
     "@types/react": "16.8.15",
@@ -52,10 +52,10 @@
     "babel-plugin-transform-jsx-stylesheet": "^0.6.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-eslint": "^10.0.11",
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-taro": "1.2.26",
-    "eslint-plugin-react": "^7.12.44",
+    "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-taro": "1.2.26"
   }
