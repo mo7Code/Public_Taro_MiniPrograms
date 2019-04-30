@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-04-27 14:00:34
+ * @LastEditTime: 2019-04-29 19:24:53
  */
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
@@ -20,6 +20,8 @@ import './app.less';
 // if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
 //   require('nerv-devtools')
 // }
+
+console.log(123);
 
 const store = {
   counterStore,
