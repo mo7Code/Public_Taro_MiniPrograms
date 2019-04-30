@@ -3,13 +3,13 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-01 00:04:21
+ * @LastEditTime: 2019-05-01 00:17:39
  */
-import Taro, { Component } from '@tarojs/taro'
-import { View, Button, Text } from '@tarojs/components'
-import { observer, inject } from '@tarojs/mobx'
+import Taro, { Component } from '@tarojs/taro';
+import { View, Button, Text } from '@tarojs/components';
+import { observer, inject } from '@tarojs/mobx';
 
-import './index.less'
+import './index.less';
 
 
 @inject('counterStore')
@@ -17,13 +17,13 @@ import './index.less'
 class Index extends Component {
 
   config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '首页',
   }
 
   componentWillMount() { }
 
   componentWillReact() {
-    console.log('componentWillReact')
+    console.log('componentWillReact');
   }
 
   componentDidMount() { }
@@ -35,31 +35,31 @@ class Index extends Component {
   componentDidHide() { }
 
   increment = () => {
-    const { counterStore } = this.props
-    counterStore.increment()
+    const { counterStore } = this.props;
+    counterStore.increment();
   }
 
   decrement = () => {
-    const { counterStore } = this.props
-    counterStore.decrement()
+    const { counterStore } = this.props;
+    counterStore.decrement();
   }
 
   incrementAsync = () => {
-    const { counterStore } = this.props
-    counterStore.incrementAsync()
+    const { counterStore } = this.props;
+    counterStore.incrementAsync();
   }
 
   render() {
-    const { counterStore: { counter } } = this.props
+    const { counterStore: { counter } } = this.props;
     return (
-      <View className='index'>
+      <View className="index">
         <Button onClick={this.increment}>+</Button>
         <Button onClick={this.decrement}>-</Button>
         <Button onClick={this.incrementAsync}>Add Async</Button>
         <Text>{counter}</Text>
       </View>
-    )
+    );
   }
 }
 
-export default Index
+export default Index;
