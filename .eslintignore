@@ -1,7 +1,4 @@
-/build/
-/config/
 /node_modules/
-/scripts/
-*.html
 /dist/
+*.html
 ./config
