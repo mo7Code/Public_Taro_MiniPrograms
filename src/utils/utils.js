@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:37:22
- * @LastEditTime: 2019-05-01 00:40:22
+ * @LastEditTime: 2019-05-01 00:42:14
  */
 import Taro from '@tarojs/taro';
 import { baseUrl } from '../config/baseUrl';
@@ -66,7 +66,8 @@ export const filterImageUrl = param => {
   /**
    * @description: 图片链接过滤器
    * @param
-              "[{"title":"1556601754","file":"/upxxx ||
+              "[{"title":"1556601754","file":"/upxxx
+              ||
               utl
    * @return:  url
    */

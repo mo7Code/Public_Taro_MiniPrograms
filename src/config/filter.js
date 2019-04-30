@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-22 11:41:56
- * @LastEditTime: 2019-04-24 19:13:32
+ * @LastEditTime: 2019-05-01 00:42:41
  */
 export const typeList = [
   {
