@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-05-01 00:14:22
+ * @LastEditTime: 2019-04-26 17:38:06
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Image, Text } from '@tarojs/components';
@@ -28,10 +28,7 @@ class _page extends Component {
     };
   }
 
-  componentWillMount() {
-    console.log(123);
-
-  }
+  componentWillMount() { }
 
   componentWillReact() { }
 

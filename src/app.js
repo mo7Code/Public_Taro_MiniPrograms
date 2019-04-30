@@ -2,16 +2,18 @@
  * @LastEditors: Mark
  * @Description: In User Settings Edit
  * @Author: Mark
- * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-01 00:04:09
+ * @Date: 2019-04-26 11:39:23
+ * @LastEditTime: 2019-04-29 19:24:53
  */
-import Taro, { Component } from '@tarojs/taro'
-import { Provider } from '@tarojs/mobx'
-import Index from './pages/index'
+import Taro, { Component } from '@tarojs/taro';
+import { Provider } from '@tarojs/mobx';
+import Index from '@/pages/index';
 
-import counterStore from './store/counter'
+import counterStore from '@/store/counter';
 
-import './app.less'
+import { version } from '@/config/baseUrl.js';
+
+import './app.less';
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -19,31 +21,43 @@ import './app.less'
 //   require('nerv-devtools')
 // }
 
+console.log(123);
+
 const store = {
-  counterStore
-}
+  counterStore,
+};
 
 class App extends Component {
-
   config = {
-    pages: [
-      'pages/index/index'
-    ],
+    pages: ['pages/index/index', 'pages/demo/index'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
+      navigationBarTextStyle: 'black',
+    },
+    requiredBackgroundModes: ['audio'],
+    permission: {
+      'scope.userLocation': {
+        desc: '你的位置信息将用于小程序位置接口的效果展示',
+      },
+    },
+  };
+
+  componentDidMount() {}
+
+  componentDidShow() {}
+
+  componentWillMount() {
+    console.log(
+      `%c当前程序版本--${version}`,
+      'font-size:10;color:green;font-weight:bold;'
+    );
   }
 
-  componentDidMount() { }
+  componentDidHide() {}
 
-  componentDidShow() { }
-
-  componentDidHide() { }
-
-  componentDidCatchError() { }
+  componentDidCatchError() {}
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
@@ -52,8 +66,8 @@ class App extends Component {
       <Provider store={store}>
         <Index />
       </Provider>
-    )
+    );
   }
 }
 
-Taro.render(<App />, document.getElementById('app'))
+Taro.render(<App />, document.getElementById('app'));
