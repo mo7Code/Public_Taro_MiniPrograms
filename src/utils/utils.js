@@ -3,9 +3,10 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:37:22
- * @LastEditTime: 2019-04-26 16:00:46
+ * @LastEditTime: 2019-05-01 00:40:22
  */
 import Taro from '@tarojs/taro';
+import { baseUrl } from '../config/baseUrl';
 
 export const getUrlParam = () => {
   /**
@@ -59,4 +60,42 @@ export const clearStore = () => {
    */
   const storage = Taro.clearStorageSync();
   return storage;
+};
+
+export const filterImageUrl = param => {
+  /**
+   * @description: 图片链接过滤器
+   * @param
+              "[{"title":"1556601754","file":"/upxxx ||
+              utl
+   * @return:  url
+   */
+  let returnUrl = '';
+  if (param.indexOf('[{') > -1) {
+    const obj = JSON.parse(param);
+    returnUrl = obj[0].file;
+  } else {
+    returnUrl = param;
+  }
+  if (returnUrl.indexOf('http') > -1) {
+  } else {
+    returnUrl = baseUrl + returnUrl;
+  }
+  return returnUrl;
+};
+
+export const formatDate = timeUnix => {
+  /**
+   * @description: 时间戳格式化
+   * @param {type}
+   * @return:
+   */
+  const now = new Date(timeUnix);
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  let date = now.getDate();
+  let hour = now.getHours();
+  let minute = now.getMinutes();
+
+  return year + '-' + month + '-' + date + '   ' + hour + ':' + minute;
 };
