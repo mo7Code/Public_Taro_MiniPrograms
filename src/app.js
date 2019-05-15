@@ -3,17 +3,17 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-05-01 00:59:24
+ * @LastEditTime: 2019-05-15 17:16:12
  */
-import Taro, { Component } from '@tarojs/taro';
-import { Provider } from '@tarojs/mobx';
-import Index from '@/pages/index';
+import Taro, { Component } from "@tarojs/taro";
+import { Provider } from "@tarojs/mobx";
+import Index from "@/pages/index";
 
-import counterStore from '@/store/counter';
+import counterStore from "@/store/counter";
 
-import { version } from '@/config/baseUrl.js';
+import { version } from "@/config/baseUrl.js";
 
-import './app.less';
+import "./app.less";
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -21,43 +21,41 @@ import './app.less';
 //   require('nerv-devtools')
 // }
 
-console.log(123);
-
 const store = {
-  counterStore,
+  counterStore
 };
 
 class App extends Component {
   config = {
-    pages: ['pages/index/index', 'pages/demo/index'],
+    pages: ["pages/index/index", "pages/demo/index"],
     window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black',
+      backgroundTextStyle: "light",
+      navigationBarBackgroundColor: "#fff",
+      navigationBarTitleText: "WeChat",
+      navigationBarTextStyle: "black"
     },
-    requiredBackgroundModes: ['audio'],
+    requiredBackgroundModes: ["audio"],
     permission: {
-      'scope.userLocation': {
-        desc: '你的位置信息将用于小程序位置接口的效果展示',
-      },
-    },
+      "scope.userLocation": {
+        desc: "你的位置信息将用于小程序位置接口的效果展示"
+      }
+    }
   };
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentDidShow() { }
+  componentDidShow() {}
 
   componentWillMount() {
     console.info(
       `%c当前程序版本--${version}`,
-      'font-size:10;color:green;font-weight:bold;'
+      "font-size:10;color:green;font-weight:bold;"
     );
   }
 
-  componentDidHide() { }
+  componentDidHide() {}
 
-  componentDidCatchError() { }
+  componentDidCatchError() {}
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
@@ -70,4 +68,4 @@ class App extends Component {
   }
 }
 
-Taro.render(<App />, document.getElementById('app'));
+Taro.render(<App />, document.getElementById("app"));
