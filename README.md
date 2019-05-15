@@ -3,10 +3,10 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-05-15 17:22:15
+ * @LastEditTime: 2019-05-15 17:51:30
  -->
 
-# Public_Taro_MiniProgram
+# Public_Taro_weapp
 
 官方文档 <https://nervjs.github.io/taro/docs/GETTING-STARTED.html>
 
