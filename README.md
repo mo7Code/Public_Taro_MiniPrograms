@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-04-30 23:54:55
+ * @LastEditTime: 2019-05-15 17:22:15
  -->
 
 # Public_Taro_MiniProgram
@@ -56,9 +56,6 @@ npm run build:h5
 插件安装建议
 
 - ESLint
-- ES7 React/Redux
-- Prettier
-- Path Intellisense
 
 当前版本需要关闭修饰器警告
 
@@ -135,4 +132,4 @@ import curryN from 'lodash/fp/curryN';
 
 ```
 
-> css 暂不支持`alias` , 在 app.js 中使用的样式会自动生效于全局
+> css 暂不支持`alias` , 在 app.js 中使用的样式会自动生效于全局(函数无法全局生效)
