@@ -40,7 +40,7 @@
     "nerv-devtools": "^1.3.13"
   },
   "devDependencies": {
-    "@types/react": "16.8.15",
+    "@types/react": "16.8.17",
     "@types/webpack-env": "^1.13.9",
     "@tarojs/plugin-babel": "1.2.26",
     "@tarojs/plugin-csso": "1.2.26",
@@ -55,7 +55,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-taro": "1.2.26",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-taro": "1.2.26"
   }
