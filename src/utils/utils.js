@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:37:22
- * @LastEditTime: 2019-05-01 00:42:14
+ * @LastEditTime: 2019-05-15 17:34:03
  */
 import Taro from '@tarojs/taro';
 import { baseUrl } from '../config/baseUrl';
@@ -22,7 +22,7 @@ export const getUrlParam = () => {
   return {};
 };
 
-export const getStore = key => {
+export const getStore = (key) => {
   /**
    * @description: 获取本地存储的值
    * @param: String
@@ -42,7 +42,7 @@ export const setStore = (key, data) => {
   return storage;
 };
 
-export const removeStore = key => {
+export const removeStore = (key) => {
   /**
    * @description: 删除本地存储
    * @param: String
@@ -62,15 +62,14 @@ export const clearStore = () => {
   return storage;
 };
 
-export const filterImageUrl = param => {
+export const filterImageUrl = (param) => {
   /**
    * @description: 图片链接过滤器
    * @param
-              "[{"title":"1556601754","file":"/upxxx
-              ||
+              "[{"title":"1556601754","file":"/upxxx ||
               utl
    * @return:  url
-   */
+  */
   let returnUrl = '';
   if (param.indexOf('[{') > -1) {
     const obj = JSON.parse(param);
@@ -80,12 +79,16 @@ export const filterImageUrl = param => {
   }
   if (returnUrl.indexOf('http') > -1) {
   } else {
-    returnUrl = baseUrl + returnUrl;
+    if (returnUrl) {
+      returnUrl = baseUrl + returnUrl;
+    } else {
+      return '';
+    }
   }
   return returnUrl;
 };
 
-export const formatDate = timeUnix => {
+export const formatDate = (timeUnix) => {
   /**
    * @description: 时间戳格式化
    * @param {type}
@@ -99,4 +102,22 @@ export const formatDate = timeUnix => {
   let minute = now.getMinutes();
 
   return year + '-' + month + '-' + date + '   ' + hour + ':' + minute;
+};
+
+export const fs_overflow = (str, num) => {
+  /**
+   * @description:  文字超出个数点点点
+   * @str  //需要裁切的文字
+   * @num   //裁切个数
+   * @return: string
+   */
+  if (str) {
+    if (str.length > num) {
+      return str.slice(0, num) + '...';
+    } else {
+      return str;
+    }
+  } else {
+    return '';
+  }
 };

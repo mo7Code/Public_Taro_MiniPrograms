@@ -3,34 +3,28 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-01 00:33:41
+ * @LastEditTime: 2019-05-15 17:25:50
  */
 module.exports = {
-  "extends": [
-    "taro"
-  ],
-  "parser": "babel-eslint",
-  "rules": {
-    "no-unused-vars": [
-      "error",
+  extends: ['taro'],
+  parser: 'babel-eslint',
+  rules: {
+    'no-unused-vars': [
+      'error',
       {
-        "varsIgnorePattern": "Taro"
-      }
+        varsIgnorePattern: 'Taro',
+      },
     ],
-    "react/jsx-filename-extension": [
+    'react/jsx-filename-extension': [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".tsx"
-        ]
-      }
+        extensions: ['.js', '.jsx', '.tsx'],
+      },
     ],
     //使用单引号
     quotes: ['error', 'single'],
     //必须使用括号包裹箭头函数的参数
-    // 'arrow-parens': ['error', 'always'],
+    'arrow-parens': ['error', 'always'],
     //强制 generator 函数
     'generator-star-spacing': ['error', { before: false, after: true }],
     'no-debugger': 'error',
@@ -190,7 +184,7 @@ module.exports = {
     'no-undef': 'error',
     'no-undefined': 'error',
     'no-use-before-define': 'error',
-  }
-}
+  },
+};
 
 // 详细规则说明请查看 http://eslint.cn/docs/rules/

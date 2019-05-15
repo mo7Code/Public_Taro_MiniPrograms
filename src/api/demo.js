@@ -3,22 +3,29 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 15:34:47
- * @LastEditTime: 2019-04-26 15:49:02
+ * @LastEditTime: 2019-05-15 17:26:56
  */
 import { ajax, baseUrl } from '../utils/http';
 
-export const postBlockPay = data => {
+export const getCommentListByDomainId = (data) => {
   /**
-   * @description: 一般的接口处理方式
+   * @description: 课程评论 - 课程详情
+   * @param {
+   * domainId, 课程id
+   * type, 评论类型，1-课程，2-话题,可用值:1,2
+   * page, 页码
+   * size, 每页数量
+   * }
+   * @return:
    */
   return ajax({
-    url: '/u/order/blockPay',
+    url: '/api/comment/list',
     data,
-    method: 'post',
+    method: 'get',
   });
 };
 
-export const getOderDetail = data => {
+export const getOderDetail = (data) => {
   /**
    * @description: 负责接口需要进行数据map的
    */
@@ -28,22 +35,22 @@ export const getOderDetail = data => {
       data,
       method: 'get',
     })
-      .then(res => {
-        const data = filter(res);
-        resolve(data);
+      .then((res) => {
+        const asyncData = filter(res);
+        resolve(asyncData);
       })
-      .catch(err => {
+      .catch((err) => {
         reject(err);
       });
   });
 
   function filter(res) {
-    const data = res.data;
+    const returnData = res.data;
     //数据处理函数
-    const venuesHomeImage = data.venuesHomeImage;
+    const venuesHomeImage = returnData.venuesHomeImage;
     const cover_HomeImage = baseUrl + JSON.parse(venuesHomeImage)[0].file;
-    data.cover_HomeImage = cover_HomeImage;
+    returnData.cover_HomeImage = cover_HomeImage;
 
-    return data;
+    return returnData;
   }
 };

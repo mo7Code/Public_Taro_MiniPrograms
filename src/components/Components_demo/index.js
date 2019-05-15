@@ -3,7 +3,7 @@
  * @Description:
  * @Author: Mark
  * @Date: 2019-04-15 01:23:08
- * @LastEditTime: 2019-05-01 00:42:51
+ * @LastEditTime: 2019-05-15 17:27:22
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
@@ -37,17 +37,17 @@ class Components_demo extends Component {
       },
     ],
   };
-  componentWillMount() { }
+  componentWillMount() {}
 
-  componentWillReact() { }
+  componentWillReact() {}
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentWillUnmount() { }
+  componentWillUnmount() {}
 
-  componentDidShow() { }
+  componentDidShow() {}
 
-  componentDidHide() { }
+  componentDidHide() {}
   render() {
     const { list } = this.props;
 

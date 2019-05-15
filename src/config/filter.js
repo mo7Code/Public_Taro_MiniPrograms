@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-22 11:41:56
- * @LastEditTime: 2019-05-01 00:42:41
+ * @LastEditTime: 2019-05-15 17:28:23
  */
 export const typeList = [
   {
@@ -54,7 +54,7 @@ export const sportsType_Find = ({ id, name }) => {
   return returnObj;
 };
 
-export const render_pay_status = status => {
+export const render_pay_status = (status) => {
   let name = '';
   let color = '';
   switch (Number(status)) {

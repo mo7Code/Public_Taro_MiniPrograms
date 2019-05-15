@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-05-01 00:45:07
+ * @LastEditTime: 2019-05-15 17:33:08
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Button, Image, Text } from '@tarojs/components';
@@ -13,9 +13,7 @@ import { WebView_domain, baseUrl, image_domain } from '@/config/baseUrl';
 import { tusiji } from '@/images/load';
 //image
 
-
 import './index.less';
-
 
 class _page extends Component {
   config = {
@@ -28,29 +26,45 @@ class _page extends Component {
     // const token = getStore('userToken');
     this.state = {
       // token,
+      id: '',
     };
   }
 
-  componentWillMount() { }
+  componentWillMount() {}
 
-  componentWillReact() { }
+  componentWillReact() {}
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentWillUnmount() { }
+  componentWillUnmount() {
+    console.log('离开页面');
+  }
 
-  componentDidHide() { }
+  componentDidHide() {}
 
   componentDidShow() {
     let { id } = getUrlParam();
-    console.info('id--', id);
+    if (id) {
+    } else {
+      Taro.showToast({
+        title: '缺少参数,这里将参数设置为默认',
+        icon: 'none',
+      });
+      id = id || '3';
+    }
+    const _this = this;
+    console.log(id);
+    _this.setState({
+      id,
+    });
   }
 
   render() {
+    const { id } = this.state;
     return (
       <View className="page">
         这里是demo页面
-        <Button>这里是demo页面 Button</Button>
+        <Button>这里是demo页面 Button {id}</Button>
         <Text className="text">这里是demo页面 Text</Text>
         <Image mode="widthFix" src={tusiji} />
         <View className="base_router">
