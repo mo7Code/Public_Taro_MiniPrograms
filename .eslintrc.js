@@ -3,24 +3,18 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-15 17:25:50
+ * @LastEditTime: 2019-05-15 17:36:41
  */
 module.exports = {
   extends: ['taro'],
   parser: 'babel-eslint',
   rules: {
-    'no-unused-vars': [
-      'error',
-      {
-        varsIgnorePattern: 'Taro',
-      },
-    ],
     'react/jsx-filename-extension': [
-      1,
-      {
-        extensions: ['.js', '.jsx', '.tsx'],
-      },
+      'error',
+      { extensions: ['.js', '.jsx', '.tsx'] },
     ],
+    //必须使用\n换行
+    'linebreak-style': ['error', 'unix'],
     //使用单引号
     quotes: ['error', 'single'],
     //必须使用括号包裹箭头函数的参数
@@ -29,13 +23,26 @@ module.exports = {
     'generator-star-spacing': ['error', { before: false, after: true }],
     'no-debugger': 'error',
     //函数空格的问题
-    // 'space-before-function-paren': 'error',
+    'space-before-function-paren': 'error',
     //分号
     semi: ['error', 'always'],
-    // 'semi-spacing': ['error', { before: true, after: true }],
+    'semi-spacing': ['error', { before: false, after: false }],
     'semi-style': ['error', 'last'],
     //console
-    'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+    'no-console': [
+      'warn',
+      {
+        allow: [
+          'warn',
+          'error',
+          'info',
+          'group',
+          'groupCollapsed',
+          'groupEnd',
+          'table',
+        ],
+      },
+    ],
     //禁用常量表达式
     'no-constant-condition': 'error',
     //禁止出现重复的键
@@ -44,16 +51,14 @@ module.exports = {
     'no-duplicate-imports': 'error',
     //jsx中使用单引号
     'jsx-quotes': ['error', 'prefer-double'],
-    //构造函数首字母大写
-    // 'new-cap': ['error', { newIsCap: true }],
     //括号内空格
-    // 'space-in-parens': ['error', 'always'],
-    //对象属性排序
-    // 'sort-keys': 'error',
+    'space-in-parens': ['error', 'always'],
     //禁止使用嵌套的三元表达式
     'no-nested-ternary': 'error',
     //禁止混合缩进
     'no-mixed-spaces-and-tabs': 'error',
+    //空格缩进
+    indent: ['error', 2],
     //调用构造函数必须带括号
     'new-parens': 'error',
     //多行注释风格
@@ -92,8 +97,6 @@ module.exports = {
     'default-case': 'error',
     //点点和操作符
     'dot-location': ['error', 'property'],
-    //属性调用
-    // 'dot-notation': ['error', { allowKeywords: false }],
     //恒等号
     eqeqeq: ['error', 'always'],
     //for-in 中必须判断
@@ -125,15 +128,11 @@ module.exports = {
     'no-implicit-coercion': 'error',
     //禁止在全局范围使用变量和函数声明
     'no-implicit-globals': 'error',
-    //禁止 this 关键字在类或类对象之外出现
-    // 'no-invalid-this': 'error',
     //禁用迭代器
     'no-iterator': 'error',
     'no-labels': 'error',
     'no-lone-blocks': 'error',
     'no-loop-func': 'error',
-    //魔术数字
-    // 'no-magic-numbers': 'error',
     //多空格问题
     'no-multi-spaces': 'error',
     //多行字符串
@@ -183,6 +182,7 @@ module.exports = {
     'no-shadow-restricted-names': 'error',
     'no-undef': 'error',
     'no-undefined': 'error',
+    'no-unused-vars': 'warn',
     'no-use-before-define': 'error',
   },
 };

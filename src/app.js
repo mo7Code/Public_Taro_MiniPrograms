@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-05-15 17:34:17
+ * @LastEditTime: 2019-05-15 17:37:53
  */
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
@@ -11,7 +11,7 @@ import Index from '@/pages/index';
 
 import counterStore from '@/store/counter';
 
-import { version } from '@/config/baseUrl.js';
+import { printVersion } from '@/config/baseUrl.js';
 
 import './app.less';
 
@@ -42,24 +42,21 @@ class App extends Component {
     },
   };
 
-  componentDidMount() {}
+  componentDidMount () {}
 
-  componentDidShow() {}
+  componentDidShow () {}
 
-  componentWillMount() {
-    console.info(
-      `%c当前程序版本--${version}`,
-      'font-size:10;color:green;font-weight:bold;'
-    );
+  componentWillMount () {
+    printVersion();
   }
 
-  componentDidHide() {}
+  componentDidHide () {}
 
-  componentDidCatchError() {}
+  componentDidCatchError () {}
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render() {
+  render () {
     return (
       <Provider store={store}>
         <Index />
@@ -68,4 +65,4 @@ class App extends Component {
   }
 }
 
-Taro.render(<App />, document.getElementById('app'));
+Taro.render( <App />, document.getElementById( 'app' ) );

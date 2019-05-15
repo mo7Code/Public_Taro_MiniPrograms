@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 16:01:28
- * @LastEditTime: 2019-05-01 00:42:38
+ * @LastEditTime: 2019-05-15 17:36:51
  */
 
 // let url = 'https://xcx.joywaygym.com'; //生产服
@@ -21,9 +21,28 @@ let image_url = ''; //小程序内引用图片的路径
 
 export const image_domain = image_url;
 
-const versionList = [{
-  version: '0.1.0',
-  description: '创建项目',
-}];
+// 版本信息管理
+const versionList = [
+  {
+    code: '0.1.0',
+    describe: 'Public_Taro_weapp',
+    user: 'Mark',
+  },
+];
 
-export const version = versionList[versionList.length - 1];
+export const printVersion = () => {
+  const version = versionList[versionList.length - 1];
+  console.groupCollapsed(
+    `%c version -- ${version.code}`,
+    'font-size:10;color:green;font-weight:bold;'
+  );
+  console.info(
+    `%c describe -- ${version.describe}`,
+    'font-size:10;color:green;font-weight:bold;'
+  );
+  console.info(
+    `%c user -- ${version.user}`,
+    'font-size:10;color:green;font-weight:bold;'
+  );
+  console.groupEnd();
+};
