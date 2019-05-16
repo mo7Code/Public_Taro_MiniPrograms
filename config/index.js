@@ -3,46 +3,46 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-01 00:25:17
+ * @LastEditTime: 2019-05-16 11:34:17
  */
-const path = require('path');
+const path = require("path");
 
 const config = {
-  projectName: 'one-taro-app',
-  date: '2019-4-30',
+  projectName: "one-taro-app",
+  date: "2019-4-30",
   designWidth: 750,
   deviceRatio: {
-    '640': 2.34 / 2,
-    '750': 1,
-    '828': 1.81 / 2
+    "640": 2.34 / 2,
+    "750": 1,
+    "828": 1.81 / 2
   },
   alias: {
-    '@': path.resolve(__dirname, '..', 'src'),
+    "@": path.resolve(__dirname, "..", "src")
   },
-  sourceRoot: 'src',
-  outputRoot: 'dist',
+  sourceRoot: "src",
+  outputRoot: "dist",
   plugins: {
     babel: {
       sourceMap: true,
       presets: [
-        ['env', {
-          modules: false
-        }]
+        [
+          "env",
+          {
+            modules: false
+          }
+        ]
       ],
       plugins: [
-        'transform-decorators-legacy',
-        'transform-class-properties',
-        'transform-object-rest-spread'
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "transform-object-rest-spread"
       ]
     }
   },
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   weapp: {
     module: {
@@ -50,18 +50,12 @@ const config = {
         autoprefixer: {
           enable: true,
           config: {
-            browsers: [
-              'last 3 versions',
-              'Android >= 4.1',
-              'ios >= 8'
-            ]
+            browsers: ["last 3 versions", "Android >= 4.1", "ios >= 8"]
           }
         },
         pxtransform: {
           enable: true,
-          config: {
-
-          }
+          config: {}
         },
         url: {
           enable: true,
@@ -72,43 +66,39 @@ const config = {
         cssModules: {
           enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
           config: {
-            namingPattern: 'module', // 转换模式，取值为 global/module
-            generateScopedName: '[name]__[local]___[hash:base64:5]'
+            namingPattern: "module", // 转换模式，取值为 global/module
+            generateScopedName: "[name]__[local]___[hash:base64:5]"
           }
         }
       }
     }
   },
   h5: {
-    publicPath: '/',
-    staticDirectory: 'static',
+    publicPath: "/",
+    staticDirectory: "static",
     module: {
       postcss: {
         autoprefixer: {
           enable: true,
           config: {
-            browsers: [
-              'last 3 versions',
-              'Android >= 4.1',
-              'ios >= 8'
-            ]
+            browsers: ["last 3 versions", "Android >= 4.1", "ios >= 8"]
           }
         },
         cssModules: {
           enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
           config: {
-            namingPattern: 'module', // 转换模式，取值为 global/module
-            generateScopedName: '[name]__[local]___[hash:base64:5]'
+            namingPattern: "module", // 转换模式，取值为 global/module
+            generateScopedName: "[name]__[local]___[hash:base64:5]"
           }
         }
       }
     }
   }
-}
+};
 
-module.exports = function (merge) {
-  if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
+module.exports = function(merge) {
+  if (process.env.NODE_ENV === "development") {
+    return merge({}, config, require("./dev"));
   }
-  return merge({}, config, require('./prod'))
-}
+  return merge({}, config, require("./prod"));
+};
