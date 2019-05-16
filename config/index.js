@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-16 11:34:17
+ * @LastEditTime: 2019-05-16 13:03:16
  */
 const path = require("path");
 
@@ -96,7 +96,7 @@ const config = {
   }
 };
 
-module.exports = function(merge) {
+module.exports = function (merge) {
   if (process.env.NODE_ENV === "development") {
     return merge({}, config, require("./dev"));
   }

@@ -3,9 +3,8 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-01 00:25:13
+ * @LastEditTime: 2019-05-16 13:03:18
  */
-
 module.exports = {
   env: {
     NODE_ENV: '"production"',
