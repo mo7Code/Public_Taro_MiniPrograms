@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-26 11:39:23
- * @LastEditTime: 2019-05-15 17:37:53
+ * @LastEditTime: 2019-05-16 13:39:11
  */
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/mobx';
@@ -42,21 +42,21 @@ class App extends Component {
     },
   };
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentWillMount () {
+  componentWillMount() {
     printVersion();
   }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
-  componentDidCatchError () {}
+  componentDidCatchError() { }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
       <Provider store={store}>
         <Index />
@@ -65,4 +65,4 @@ class App extends Component {
   }
 }
 
-Taro.render( <App />, document.getElementById( 'app' ) );
+Taro.render(<App />, document.getElementById('app'));

@@ -3,15 +3,15 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-22 01:22:37
- * @LastEditTime: 2019-05-15 17:33:41
+ * @LastEditTime: 2019-05-16 13:36:30
  */
 import Taro from '@tarojs/taro';
-import { getStore } from './util_new';
+import { getStore } from './utils';
 import { baseUrl } from '../config/baseUrl';
 
 export { baseUrl };
 
-const interceptor = function(chain) {
+const interceptor = function (chain) {
   const requestParams = chain.requestParams;
   // const { method, data, url } = requestParams;
   return chain.proceed(requestParams).then((res) => {
