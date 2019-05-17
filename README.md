@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-05 22:28:55
- * @LastEditTime: 2019-05-15 17:51:30
+ * @LastEditTime: 2019-05-17 16:30:07
  -->
 
 # Public_Taro_weapp
@@ -57,12 +57,31 @@ npm run build:h5
 
 - ESLint
 
-当前版本需要关闭修饰器警告
-
-在 setting.json 中加入设置:
+### settings.json 设置
 
 ```json
-  "javascript.implicitProjectConfig.experimentalDecorators": true
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+}
 ```
 
 ## 脚手架定制化
