@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-30 23:46:00
- * @LastEditTime: 2019-05-17 13:22:19
+ * @LastEditTime: 2019-05-17 13:39:57
  */
 module.exports = {
   extends: ['taro'],
@@ -51,14 +51,6 @@ module.exports = {
     'no-ex-assign': "error",
     //禁止不必要的布尔类型转换
     'no-extra-boolean-cast': "error",
-    //圆括号使用规则
-    'no-extra-parens': ["error", "all", {
-      "ignoreJSX": "all",
-      "conditionalAssign": false,
-      "returnAssign": false,
-      "nestedBinaryExpressions": false,
-      "enforceForArrowConditionals": false
-    }],
     'no-extra-semi': "error",
     'no-func-assign': "error",
     'no-inner-declarations': "error",
