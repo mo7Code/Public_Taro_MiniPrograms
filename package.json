@@ -31,7 +31,7 @@
     "@tarojs/taro-swan": "1.2.26",
     "@tarojs/taro-tt": "1.2.26",
     "@tarojs/taro-weapp": "1.2.26",
-    "@tarojs/rn-runner": "1.2.26",
+    "@tarojs/rn-runner": "3.5.10",
     "@tarojs/mobx": "1.2.26",
     "@tarojs/mobx-h5": "1.2.26",
     "@tarojs/mobx-rn": "1.2.26",
